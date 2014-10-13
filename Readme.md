@@ -4,8 +4,6 @@
 
 Tools for creating [adventures](https://github.com/substack/adventure).
 
-## Features
-
 * Adds syntax highlighting and colour to exercise Readme.
 * Prints syntax-highlighted official solution on passed exercise.
 * Creates a directory for exercise in user's cwd on exercise start.
