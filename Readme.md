@@ -4,17 +4,19 @@ Tools for creating [adventures](https://github.com/substack/adventure).
 
 ## Features
 
+
 * Adds syntax highlighting and colour to exercise Readme.
 * Prints syntax-highlighted official solution on passed exercise.
-* On startup creates a directory for each exercise in user's cwd.
-* On startup copies exercise boilerplate and Readme into exercise directory.
-* Exercise boilerplate generator.
-* Adventure boilerplate generator.
+* Creates a directory for exercise in user's cwd on exercise start.
+* Copies exercise boilerplate and Readme into exercise directory on exercise start.
+* Minimal adventure bootstrapping and boilerplate generation.
+* Minimal exercise bootstrapping and boilerplate generation.
 
 ## Generating Adventures
 
-You can use `adventure-map` to generate some simple boilerplate for an
-entire adventure:
+You can use `adventure-map` to generate the minimal boilerplate for an
+entire adventure. It includes a bootstrap file to load all the exercises
+and an example exercise to use as a guide.
 
 ```
 > mkdir test-adventure
@@ -29,7 +31,8 @@ exercises/example/solution.js
 index.js
 ```
 
-Currently you need to add exercises to your package.json manually:
+By default, exercises are loaded as `name`:`relative path` pairs
+from your package.json.
 
 ```json
 {
@@ -44,8 +47,10 @@ Currently you need to add exercises to your package.json manually:
   }
 }
 ```
+If you don't like this convention of loading from the package.json,
+just change where the exercises load from, it's one line of code.
 
-Now you can start your adventure:
+After you've configured at least one exercise, can start your adventure:
 
 ```
 > node index.js
@@ -53,9 +58,9 @@ Now you can start your adventure:
 
 ![image](https://cloud.githubusercontent.com/assets/43438/4608128/f6e40db2-5272-11e4-8ff4-7c2347badf27.png)
 
-## The Boilerplate Explained
+## Adventure Bootstrap Code
 
-The adventure boilerplate simply finds the exercises defined in your
+The adventure bootstrap simply finds the exercises defined in your
 package.json and loads them into adventure.
 
 ```js
@@ -101,7 +106,8 @@ exercises/getting-started/solution.js
 The exercise's script will load up the Readme, boilerplate and solution
 text for you, and provide a verify stub.
 
-### index.js
+## Exercise Bootstrap Code
+
 ```js
 "use strict"
 
