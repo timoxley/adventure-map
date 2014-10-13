@@ -15,17 +15,13 @@ adventure-map will generate a [substack/adventure](https://github.com/substack/a
 ## Usage
 
 ```js
-var resolve = require('path').resolve
+var r = require('path').resolve
 var adventureMap = require('adventure-map')
 
 var adventure = adventureMap({
   exercises: {
-    'Getting Started': resolve(
-      __dirname, 'exercises/getting-started'
-    ),
-    'Learning Things': resolve(
-      __dirname, 'exercises/learning-things'
-    )
+    'Getting Started': r(__dirname, 'exercises/getting-started'),
+    'Learning Things': r(__dirname, 'exercises/learning-things')
   }
 })
 
