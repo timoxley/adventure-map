@@ -1,7 +1,7 @@
 # adventure-map
 
 Pass an object mapping exercise names to exercise files,
-adventure-map will generate an adventure for you.
+adventure-map will generate a [substack/adventure](https://github.com/substack/adventure) for you.
 
 ## Features
 
