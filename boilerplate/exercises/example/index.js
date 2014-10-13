@@ -15,4 +15,6 @@ exports.verify = function(args, cb) {
   cb(false) // true if submission good
 }
 
-exports.run // TODO
+exports.run = function() {
+  // TODO
+}

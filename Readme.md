@@ -87,7 +87,9 @@ exports.verify = function(args, cb) {
   cb(false) // true if submission good
 }
 
-exports.run // TODO
+exports.run = function() {
+  // TODO
+}
 ```
 
 ## Generating Adventures
@@ -108,28 +110,7 @@ exercises/example/solution.js
 index.js
 ```
 
-The adventure boilerplate simply finds the exercises defined in your
-package.json and loads them into adventure:
-
-```js
-#!/usr/bin/env node
-
-var path = require('path')
-var adventureMap = require('adventure-map')
-var pkg = require('./package.json')
-
-Object.keys(pkg.exercises).forEach(function(name) {
-  pkg.exercises[name] = path.resolve(__dirname, pkg.exercises[name])
-})
-
-var adventure = adventureMap(pkg)
-
-if (!module.parent) adventure.execute(process.argv.slice(2))
-
-module.exports = adventure
-```
-
-Note you need to add exercises to your package.json manually:
+Currently you need to add exercises to your package.json manually:
 
 ```json
 {
@@ -140,10 +121,44 @@ Note you need to add exercises to your package.json manually:
     "adventure-map": "1.0.0"
   },
   "exercises": {
-    "Getting Started": "exercises/getting-started",
-    "Learning Things": "exercises/learning-things"
+    "Getting Started": "exercises/example"
   }
 }
+```
+
+Now you can start your adventure:
+
+```
+> node index.js
+```
+
+![image](https://cloud.githubusercontent.com/assets/43438/4608128/f6e40db2-5272-11e4-8ff4-7c2347badf27.png)
+
+## The Boilerplate Explained
+
+The adventure boilerplate simply finds the exercises defined in your
+package.json and loads them into adventure.
+
+```js
+#!/usr/bin/env node
+
+var path = require('path')
+var adventureMap = require('adventure-map')
+var pkg = require('./package.json')
+
+// resolve all package.json exercises relative
+// to this directory.
+Object.keys(pkg.exercises).forEach(function(name) {
+  pkg.exercises[name] = path.resolve(__dirname, pkg.exercises[name])
+})
+
+var adventure = adventureMap(pkg)
+
+// auto-execute if run from commandline
+if (!module.parent) adventure.execute(process.argv.slice(2))
+
+// export for manual execution
+module.exports = adventure
 ```
 
 ### Important
