@@ -133,14 +133,18 @@ exports.run = function() {
 ## API Usage
 
 You don't need to use the generated boilerplate in order to
-use adventure-map, just pass it a mapping of exercise names
-and the paths to their exercises as files or folders. 
+use adventure-map! Just pass it the adventure name and a mapping of
+exercise names and corresponding exercise paths.
+
+You'll be passed back a [substack/adventure](https://github.com/substack/adventure)
+instance.
 
 ```js
 var r = require('path').resolve
 var adventureMap = require('adventure-map')
 
 var adventure = adventureMap({
+  name: 'Learnathon',
   exercises: {
     'Getting Started': r(__dirname, 'exercises/getting-started'),
     'Learning Things': r(__dirname, 'exercises/learning-things')
