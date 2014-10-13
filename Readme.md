@@ -2,7 +2,7 @@
 
 <img align="right" src="https://cloud.githubusercontent.com/assets/43438/4612060/79cb38f0-52c2-11e4-9bc8-87cb0b355666.png"/>
 
-Tools for creating [adventures](https://github.com/substack/adventure).
+Tools for guiding the creation of [adventures](https://github.com/substack/adventure).
 
 * Adds syntax highlighting and colour to exercise Readme.
 * Prints syntax-highlighted official solution on passed exercise.
