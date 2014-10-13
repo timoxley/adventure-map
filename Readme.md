@@ -39,8 +39,8 @@ exercises/example/solution.js
 index.js
 ```
 
-By default, exercises are loaded as `name`:`relative path` pairs
-from your package.json.
+By default, exercises are loaded as `"name": "relative/path/to/exercise"` pairs
+from your package.json. You need to add exercises to the package.json manually.
 
 ```json
 {
@@ -56,7 +56,8 @@ from your package.json.
 }
 ```
 If you don't like this convention of loading from the package.json,
-just change where the exercises load from, it's one line of code.
+just change where the exercises load from, it's one line of code in
+the bootstrap code (see below).
 
 After you've configured at least one exercise, can start your adventure:
 
