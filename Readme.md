@@ -2,6 +2,8 @@
 
 Tools for creating [adventures](https://github.com/substack/adventure).
 
+<img style="float:right" src="https://cloud.githubusercontent.com/assets/43438/4612060/79cb38f0-52c2-11e4-9bc8-87cb0b355666.png"/>
+
 ## Features
 
 
@@ -172,6 +174,9 @@ module.exports = {
 }
 ```
 
+# Credit
+
+Map logo designed by Ruben Verhasselt from the [thenounproject.com](http://thenounproject.com)
 
 # License
 
