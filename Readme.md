@@ -4,12 +4,40 @@ Pass an object mapping exercise names to exercise files,
 adventure-map will generate an adventure for you.
 
 ## Features
-* Adds syntax highlighting and colour to your exercise.
-* Adds syntax highlighting and colour to your exercise.
 
+* Adds syntax highlighting and colour to exercise Readme.
+* Prints syntax-highlighted official solution on passed exercise.
+* On startup creates a directory for each exercise in user's cwd.
+* On startup copies exercise boilerplate and Readme into exercise directory.
+* Exercise boilerplate generator.
+* Adventure boilerplate generator.
 
-In addition to exercises should follow the format:
+## Usage
 
+```js
+var resolve = require('path').resolve
+var adventureMap = require('adventure-map')
+
+var adventure = adventureMap({
+  exercises: {
+    'Getting Started': resolve(
+      __dirname, 'exercises/getting-started'
+    ),
+    'Learning Things': resolve(
+      __dirname, 'exercises/learning-things'
+    )
+  }
+})
+
+adventure.execute(process.argv.slice(2))
+```
+
+## adventure-map Exercise Format
+
+`adventure-map` exercises follow the same format as `adventure`
+exercises, with some additional properties:
+
+```js
 module.exports = {
   problem: 'problem text',
   solution: 'solution code',
@@ -22,6 +50,7 @@ module.exports = {
     // optional 'run' logic
   }
 }
+```
 
 ## Generating Exercises
 
@@ -37,7 +66,7 @@ exercises/getting-started/solution.js
 ```
 
 The exercise's script will load up the Readme, boilerplate and solution
-text for you, and provide a verify stub for you:
+text for you, and provide a verify stub.
 
 ### index.js
 ```js
@@ -116,6 +145,11 @@ Note you need to add exercises to your package.json manually:
   }
 }
 ```
+
+### Important
+
+The boilerplate is just provided as a starting point, don't feel bad
+about changing any of the generated code.
 
 # License
 
