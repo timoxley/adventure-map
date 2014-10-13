@@ -11,6 +11,15 @@ Tools for guiding the creation of [adventures](https://github.com/substack/adven
 * Minimal adventure bootstrapping and boilerplate generation.
 * Minimal exercise bootstrapping and boilerplate generation.
 
+## CLI Usage
+
+```
+> adventure-map --help
+  Usage:
+    adventure-map init         Bootstrap current directory.
+    adventure-map new [name]   Bootstrap new exercise with [name].
+```
+
 ## Generating Adventures
 
 You can use `adventure-map` to generate the minimal boilerplate for an
