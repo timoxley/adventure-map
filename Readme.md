@@ -27,7 +27,7 @@ var adventure = adventureMap({
 adventure.execute(process.argv.slice(2))
 ```
 
-## adventure-map Exercise Format
+## Exercise Format
 
 `adventure-map` exercises follow the same format as `adventure`
 exercises, with some additional properties:
