@@ -34,7 +34,6 @@ module.exports = function(options) {
     assert(exercise.problem, 'exercise %s needs problem', exercise.name)
     assert(exercise.solution, 'exercise %s needs solution', exercise.name)
     assert(exercise.boilerplate, 'exercise %s needs boilerplate', exercise.name)
-    assert(exercise.run, 'exercise %s needs run', exercise.name)
     assert(exercise.verify, 'exercise %s needs verify', exercise.name)
   })
 
