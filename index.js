@@ -68,7 +68,7 @@ function setup(exercises) {
       'name': 'ok',
       'default': true,
       'message': wordwrap(4, 80)(
-        "We're about to populate the above directory with some files needed for the exercises." +
+        "We're about to populate the above directory with some files needed for the exercises. " +
         "If they've already been created then don't worry, " +
         "they won't be replaced. Continue?"
       ).replace(/^\s+/, '')
