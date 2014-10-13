@@ -144,7 +144,7 @@ var r = require('path').resolve
 var adventureMap = require('adventure-map')
 
 var adventure = adventureMap({
-  name: 'Learnathon',
+  name: 'test-adventure',
   exercises: {
     'Getting Started': r(__dirname, 'exercises/getting-started'),
     'Learning Things': r(__dirname, 'exercises/learning-things')
