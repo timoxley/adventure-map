@@ -177,8 +177,8 @@ module.exports = {
 
 # Credit
 
-Map logo designed by Ruben Verhasselt from the [thenounproject.com](http://thenounproject.com).
-Big thanks to substack for the creation of [adventure](https://github.com/substack/adventure).
+* Map logo designed by Ruben Verhasselt from the [thenounproject.com](http://thenounproject.com).
+* Big thanks to substack for the creation of [adventure](https://github.com/substack/adventure).
 
 # License
 
