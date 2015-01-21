@@ -4,13 +4,18 @@
 
 Tools with sensible defaults for guiding the creation of [adventures](https://github.com/substack/adventure).
 
-* Optionally generate minimal (20 loc) bootstrap code for an adventure.
-* Optionally generate [minimal bootstrap files](https://github.com/timoxley/adventure-map/tree/dfecf9ec22152216e7e3ba61c6150bde2dee5596/boilerplate/exercises/example) for an exercise (`Readme.md`, `bootstrap.js`, `solution.js` & `verify.js`)
-* Adds support for adding exercise boilerplate.
 * Adds syntax highlighting and colour when printing problem description.
 * Prints syntax highlighted solution on completion of an exercise.
+* * Adds support for setting up exercise boilerplate.
 * Generates a bootstrapped directory for user's solution in cwd on exercise start.
 * Includes copy of problem description in generated solution directory for user.
+
+Also includes optional code generators:
+
+* Minimal bootstrap code for starting to build a new adventure (~20 LOC).
+* Bootstrap an exercise with a few [default files](https://github.com/timoxley/adventure-map/tree/dfecf9ec22152216e7e3ba61c6150bde2dee5596/boilerplate/exercises/example) for an exercise (`Readme.md`, `bootstrap.js`, `solution.js` & `verify.js`)
+
+I normally *hate* code generators so I've tried to make the code generation spit out the most unopinionated code that you probably would have written anyway. All generated code is extremely simple and makes minimal assumptions. You can safely and easily modify the generated code to work however you wish.
 
 ## CLI Usage
 
