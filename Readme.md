@@ -2,14 +2,13 @@
 
 <img align="right" src="https://cloud.githubusercontent.com/assets/43438/4612060/79cb38f0-52c2-11e4-9bc8-87cb0b355666.png"/>
 
-Tools for guiding the creation of [adventures](https://github.com/substack/adventure).
+Tools with sensible defaults for guiding the creation of [adventures](https://github.com/substack/adventure).
 
-* Adds syntax highlighting and colour to exercise Readme.
+* Optionally generate minimal (20 loc) bootstrap code for an adventure.
+* Optionally generate [minimal bootstrap files](https://github.com/timoxley/adventure-map/tree/dfecf9ec22152216e7e3ba61c6150bde2dee5596/boilerplate/exercises/example) for an exercise (`Readme.md`, `bootstrap.js`, `solution.js` & `verify.js`)
+* Adds syntax highlighting and colour when printing Readme.
+* Creates a bootstrapped directory for user's solution in cwd on exercise start.
 * Prints syntax-highlighted official solution on passed exercise.
-* Creates a directory for exercise in user's cwd on exercise start.
-* Copies exercise boilerplate and Readme into exercise directory on exercise start.
-* Minimal adventure bootstrapping and boilerplate generation.
-* Minimal exercise bootstrapping and boilerplate generation.
 
 ## CLI Usage
 
@@ -168,7 +167,7 @@ adventure.execute(process.argv.slice(2))
 ## Exercise Format
 
 `adventure-map` exercises follow the same format as `adventure`
-exercises, with some additional properties:
+exercises, with some additional, optional properties:
 
 ```js
 module.exports = {
