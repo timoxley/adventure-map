@@ -6,9 +6,11 @@ Tools with sensible defaults for guiding the creation of [adventures](https://gi
 
 * Optionally generate minimal (20 loc) bootstrap code for an adventure.
 * Optionally generate [minimal bootstrap files](https://github.com/timoxley/adventure-map/tree/dfecf9ec22152216e7e3ba61c6150bde2dee5596/boilerplate/exercises/example) for an exercise (`Readme.md`, `bootstrap.js`, `solution.js` & `verify.js`)
-* Adds syntax highlighting and colour when printing Readme.
-* Creates a bootstrapped directory for user's solution in cwd on exercise start.
-* Prints syntax-highlighted official solution on passed exercise.
+* Adds support for adding exercise boilerplate.
+* Adds syntax highlighting and colour when printing problem description.
+* Prints syntax highlighted solution on completion of an exercise.
+* Generates a bootstrapped directory for user's solution in cwd on exercise start.
+* Includes copy of problem description in generated solution directory for user.
 
 ## CLI Usage
 
@@ -167,13 +169,13 @@ adventure.execute(process.argv.slice(2))
 ## Exercise Format
 
 `adventure-map` exercises follow the same format as `adventure`
-exercises, with some additional, optional properties:
+exercises, with an additional `boilerplate` property:
 
 ```js
 module.exports = {
   problem: 'problem text',
   solution: 'solution code',
-  boilerplate: 'boilerplate code'
+  boilerplate: 'boilerplate code' // optional
   verify: function(args, cb) {
     // insert validation logic
     cb(false) // true if submission good
