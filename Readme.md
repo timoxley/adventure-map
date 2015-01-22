@@ -6,7 +6,7 @@ Tools with sensible defaults for guiding the creation of [adventures](https://gi
 
 * Adds syntax highlighting and colour when printing problem description.
 * Prints syntax highlighted solution on completion of an exercise.
-* * Adds support for setting up exercise boilerplate.
+* Adds support for setting up exercise boilerplate.
 * Generates a bootstrapped directory for user's solution in cwd on exercise start.
 * Includes copy of problem description in generated solution directory for user.
 
