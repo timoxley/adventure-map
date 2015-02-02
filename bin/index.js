@@ -34,7 +34,7 @@ if (cmd === 'init') {
   })
 } else {
   console.log(usage())
-  process.exit(1)
+  process.exit(argv.help ? 0 : 1)
 }
 
 function cpr(src, dest, fn) {
