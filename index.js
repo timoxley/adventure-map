@@ -2,7 +2,7 @@
 
 "use strict"
 
-var adventure = require('adventure');
+var adventure = require('adventure')
 var msee = require('msee')
 var fs = require('fs')
 var path = require('path')
@@ -11,7 +11,7 @@ var wordwrap = require('wordwrap')
 var assert = require('assertf')
 
 module.exports = function(options) {
-  var shop = adventure(options);
+  var shop = adventure(options)
   shop.on('pass', function() {
     console.log('Type `' + options.name+ '` to show the menu.\n')
   })
