@@ -1,6 +1,7 @@
 1.0.5 / 2015-02-03
 ==================
 
+  * Remove executable permissions on index.js
   * Remove unused cpr dependency
   * Add generated example
   * Whitespace & formatting
