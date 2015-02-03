@@ -1,0 +1,18 @@
+{
+  "name": "adventure-map-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exercises": {
+    "Getting Started": "exercises/example"
+  },
+  "keywords": [],
+  "author": "Tim Oxley <secoif@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "adventure-map": "^1.0.4"
+  }
+}
