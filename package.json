@@ -1,6 +1,6 @@
 {
   "name": "adventure-map",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple exercise loader & generators for substack/adventure.",
   "main": "index.js",
   "bin": {
