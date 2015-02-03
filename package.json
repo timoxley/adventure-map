@@ -14,7 +14,6 @@
   "dependencies": {
     "adventure": "^2.10.0",
     "assertf": "^1.0.0",
-    "cpr": "^0.3.2",
     "inquirer": "^0.8.0",
     "lsr": "^1.0.0",
     "minimist": "^1.1.0",
