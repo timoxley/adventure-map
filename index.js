@@ -11,6 +11,9 @@ var wordwrap = require('wordwrap')
 var assert = require('assertf')
 
 module.exports = function(options) {
+  // Prevent automatic close of stdin, so that input is possible after showing
+  // the problem description.
+  options.autoclose = false;
   var shop = adventure(options)
   shop.on('pass', function() {
     console.log('Type `' + options.name+ '` to show the menu.\n')
