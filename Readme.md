@@ -2,20 +2,22 @@
 
 <img align="right" src="https://cloud.githubusercontent.com/assets/43438/4612060/79cb38f0-52c2-11e4-9bc8-87cb0b355666.png"/>
 
-Tools with sensible defaults for guiding the creation of [adventures](https://github.com/substack/adventure).
+Tools with sensible defaults for guiding the creation of new [adventure](https://github.com/substack/adventure) workshops.
 
-* Adds syntax highlighting and colour when printing problem description.
+* Coloured syntax highlighting in exercise descriptions.
 * Prints syntax highlighted solution on completion of an exercise.
-* Adds support for setting up exercise boilerplate.
-* Generates a bootstrapped directory for user's solution in cwd on exercise start.
-* Includes copy of problem description in generated solution directory for user.
+* Add optional exercise boilerplate.
+* Generates a user solution directory for each exercise.
+* User solution directory includes exercise boilerplate & problem description.
 
-Also includes optional code generators:
+Code generators for easily starting new workshops & exercises:
 
-* Minimal bootstrap code for starting to build a new adventure (~20 LOC).
-* Bootstrap an exercise with a few [default files](https://github.com/timoxley/adventure-map/tree/dfecf9ec22152216e7e3ba61c6150bde2dee5596/boilerplate/exercises/example) for an exercise (`Readme.md`, `bootstrap.js`, `solution.js` & `verify.js`)
+* Generate a new workshop with `adventure-map init`. Creates minimal bootstrap (~20 LOC).
+* Generate a new exercise with `adventure-map new exercise-name`: Bootstraps a few [default files](https://github.com/timoxley/adventure-map/tree/dfecf9ec22152216e7e3ba61c6150bde2dee5596/boilerplate/exercises/example) for an exercise (`Readme.md`, `bootstrap.js`, `solution.js` & `verify.js`)
 
-I normally *hate* code generators so I've tried to make the code generation spit out the most unopinionated code that you probably would have written anyway. All generated code is extremely simple and makes minimal assumptions. You can safely and easily modify the generated code to work however you wish.
+I normally *hate* code generators so I've tried to make the code generation only spit out the most unopinionated code that you probably would have written anyway. All generated code is extremely simple and makes minimal assumptions. You can safely and easily modify the generated code to work however you wish.
+
+TODO: custom code generation templates.
 
 ## CLI Usage
 
