@@ -51,6 +51,9 @@ module.exports = function(options) {
 }
 
 function setup(exercises) {
+  var rcFilename = process.cwd() + '/.adventure-map-skip-setup'
+  if(fs.existsSync(rcFilename)) return
+
   var boilerPlateRequired = exercises.filter(function(exercise) {
     return exercise.boilerplate
   }).filter(function(exercise) {
@@ -66,16 +69,37 @@ function setup(exercises) {
   if (boilerPlateRequired.length) {
     console.log('\n' + process.cwd() + '\n')
     inquirer.prompt([{
-      'type': 'confirm',
-      'name': 'ok',
-      'default': true,
-      'message': wordwrap(4, 80)(
+      type: 'expand',
+      name: 'ok',
+      default: 'y',
+      message: wordwrap(4, 80)(
         "We're about to populate the above directory with some files needed for the exercises. " +
         "If they've already been created then don't worry, " +
         "they won't be replaced. Continue?"
-      ).replace(/^\s+/, '')
+      ).replace(/^\s+/, ''),
+      choices: [
+        {
+          key: 'y',
+          name: 'Yes',
+          value: true
+        },
+        {
+          key: 'n',
+          name: 'No',
+          value: false
+        },
+        {
+          key: 'v',
+          name: 'Never',
+          value: 'never'
+        },
+      ]
     }], function(result) {
-      if (!result.ok) return
+      if (result.ok === false) return
+      if (result.ok === 'never') {
+        return fs.writeFileSync(rcFilename)
+      }
+
       boilerPlateRequired.forEach(function(item) {
         try {
           fs.mkdirSync(item.dir)
